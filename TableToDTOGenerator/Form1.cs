@@ -199,6 +199,9 @@ namespace TableToDTOGenerator
                             case "bit":
                                 sb.AppendLine(string.Format("        public {0}? {1}", "Boolean", field.colName));
                                 break;
+                            case "tinyint":
+                                sb.AppendLine(string.Format("        public {0}? {1}", "Byte", field.colName));
+                                break;
                             default:
                                 break;
                         }
